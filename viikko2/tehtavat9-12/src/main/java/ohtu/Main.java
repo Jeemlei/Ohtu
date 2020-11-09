@@ -28,7 +28,7 @@ public class Main {
         kauppa.tilimaksu("Arto Vihavainen", "3425-1652");
 
         // kirjanpito
-        for (String tapahtuma : new Kirjanpito().getTapahtumat()) {
+        for (String tapahtuma : ctx.getBean(Kirjanpito.class).getTapahtumat()) {
             System.out.println(tapahtuma);
         }
     }
